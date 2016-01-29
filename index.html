@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tic Tac Toe!</title>
+    <meta charset="utf-8">
+    <link href="index.css" media="screen" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+  </head>
+
+  <body>
+    <h1>Tic-TAc-G.O.B.</h1>
+    <button class="reset">🍌 <span class="arrested-development">start a new game</span></button>
+    <div id="tic-tac-toe">
+      <div class="row">
+        <div class="square" id="top-left">
+          <img class="banana" src="images/banana.png">
+        </div>
+        <div class="square" id="top-mid">
+          <img class="banana" src="images/banana.png">
+        </div>
+        <div class="square" id="top-right">
+          <img class="banana" src="images/banana.png">
+        </div>
+      </div>
+      <div class="row">
+        <div class="square" id="mid-left">
+          <img class="banana" src="images/banana.png">
+        </div>
+        <div class="square" id="mid-mid">
+          <img class="banana" src="images/banana.png">
+        </div>
+        <div class="square" id="mid-right">
+          <img class="banana" src="images/banana.png">
+        </div>
+      </div>
+      <div class="row">
+        <div class="square" id="bottom-left">
+          <img class="banana" src="images/banana.png">
+        </div>
+        <div class="square" id="bottom-mid">
+          <img class="banana" src="images/banana.png">
+        </div>
+        <div class="square" id="bottom-right">
+          <img class="banana" src="images/banana.png">
+        </div>
+      </div>
+    </div>
+  </body>
+
+
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script src="tic-tac-toe.js"></script>
+  <script type="text/javascript">
+    $(document).on('ready', function() {
+      $(".reset").click(function () {
+        location.reload();
+      });
+      var game = new TicTacToe();
+      $(".square").one("click", function () {
+        if (game.over === false) {
+          $(this).html("<img src=" + game.currentPlayer.pictureURL + ">");
+          game.updateBoard(this);
+          game.turns += 1;
+          game.play();
+        }
+      });
+    })
+  </script>
+</html>

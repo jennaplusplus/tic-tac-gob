@@ -1,0 +1,71 @@
+@font-face {
+  font-family: antiqueOlive;
+  src: url("AntiqueOlive.ttf");
+}
+
+html {
+
+}
+
+body {
+  background-color: #F98F1B;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'antiqueOlive', cursive;
+  letter-spacing: -3px;
+  text-align: center;
+  color: black;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+button {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.arrested-development {
+  font-family: 'antiqueOlive', cursive;
+}
+
+h2 {
+  font-family: 'antiqueOlive', cursive;
+  text-align: center;
+  color: black;
+  font-size: 36px;
+  letter-spacing: -3px;
+}
+
+div.row {
+  text-align: center;
+}
+
+div.square {
+  border: 5px solid black;
+  background-color: white;
+  height: 150px;
+  width: 150px;
+  margin: 5px;
+  display: inline-block;
+  position: relative;
+}
+
+img {
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: auto;
+}
+
+.banana {
+  opacity: 0.3;
+  left: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 75%;
+  width: auto;
+}
